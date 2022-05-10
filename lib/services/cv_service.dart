@@ -9,7 +9,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../common/urlsolver.dart';
 import '../model/api_status.dart';
 
-//import 'dart:html' as html;
+import 'dart:html' as html;
 
 //service class for all CV-related requests
 
@@ -97,15 +97,15 @@ class CVService {
     final uri = Uri.http(UrlSolver.rootBare, UrlSolver.generateCVPdf(),
         {"userId": userId.toString()});
 
-    // downloadFile("http://localhost:8080/Recruitment/cv/createpdf?userId=" + userId.toString());
+     downloadFile("http://localhost:8080/Recruitment/cv/createpdf?userId=" + userId.toString());
   }
 
-/*
+
 //helper function to download a PDF from a browser
 void downloadFile(String url) {
    html.AnchorElement anchorElement =  new html.AnchorElement(href: url);
    anchorElement.download = url;
    anchorElement.click();
 }
-*/
+
 }
